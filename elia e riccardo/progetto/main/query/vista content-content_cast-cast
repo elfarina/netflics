@@ -1,0 +1,17 @@
+CREATE VIEW content_cast_view AS
+SELECT 
+    c.id AS content_id,
+    c.title AS content_title,
+    c.description AS content_description,
+    c.release_year AS content_release_year,
+    c.type AS content_type,
+    c.poster_url AS content_poster_url,
+    ca.id AS cast_id,
+    ca.name AS cast_name,
+    ca.role AS cast_role
+FROM 
+    content c
+JOIN 
+    content_cast cc ON c.id = cc.content_id
+JOIN 
+    cast ca ON cc.cast_id = ca.id;

@@ -1,0 +1,14 @@
+CREATE VIEW content_series_view AS
+SELECT 
+    c.id AS content_id,
+    c.title AS content_title,
+    c.description AS content_description,
+    c.release_year AS content_release_year,
+    c.type AS content_type,
+    c.poster_url AS content_poster_url,
+    c.rating AS content_rating,
+    s.seasons_count AS series_seasons_count
+FROM 
+    content c
+LEFT JOIN 
+    series s ON c.id = s.id AND c.type = 'series';

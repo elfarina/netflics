@@ -1,0 +1,1 @@
+SELECT DISTINCT c.* FROM content c JOIN content_genres cg1 ON c.id = cg1.content_id WHERE cg1.genre_id IN ( SELECT genre_id FROM content_genres cg2 WHERE cg2.content_id = 1 ) AND c.id != 1;

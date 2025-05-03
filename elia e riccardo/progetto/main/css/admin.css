@@ -1,0 +1,174 @@
+body{
+    padding-bottom:10vh;
+}
+
+header {
+    justify-content: center;
+    align-items: center;
+}
+
+header .mynavbar {
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 5rem;
+    padding: 0 0.4rem 0 0.4rem;
+}
+
+.mynavbar .navbar-title {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+    max-width: 50%;
+}
+
+.mynavbar .navbar-title img {
+    max-height: 80px;
+    aspect-ratio: 20/10;
+    object-fit: cover;
+}
+
+.navbar-buttons {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+}
+
+.nav-button-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    min-width: 20%;
+    height: 2rem;
+    align-items: center;
+}
+section.main{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+}   
+.datasheet-container{
+    min-height:50vh;
+    width:80%;
+}
+.datasheet-container .content-wrapper{
+    overflow-y:scroll;
+    overflow-x: hidden; 
+    max-height:50vh;
+}
+
+.movie-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    align-content: center;
+}
+
+.movie-form form {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.movie-form form .input-wrapper{
+    width:70%;
+    min-width: 30%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.2s ease-in-out;
+}
+.movie-form form .input-wrapper label.input-title {
+    font-size: 1rem;
+    font-family: "Bebas Neue", serif;
+    color:#E50914;
+    transition: all 0.2s ease-in-out;
+}
+.movie-form form .input-wrapper:hover label.input-title{
+    opacity:0;
+    transform: scale(0.8);
+    transform: translateY(2rem);
+    color:black;
+}
+
+.movie-form form .input-wrapper input, .movie-form form .input-wrapper textarea{
+    transition: all 0.2s ease-in-out;
+    opacity:0.5;
+}
+.input-wrapper input[type="file"] {
+    display: none;
+}
+.input-wrapper .file-label {
+    background-color:#191919;
+    color:white;
+    margin:1rem 0;
+    padding:0.3rem 0;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    transition: all 0.2s ease-in-out;
+}
+.input-wrapper .file-label:hover {
+    background-color: #E50914;
+    transform: scale(1.005);
+}
+.input-wrapper .file-name {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+.movie-form form .input-wrapper:hover input, .movie-form form .input-wrapper:hover textarea{
+    opacity:1;
+    transform: scale(1.005);
+}
+.big-title{
+    font-weight: 400;
+    font-size: 2rem;
+}
+.title {
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+.subtitle{
+    font-weight: 200;
+    font-size:1.2rem;
+}
+.italic {
+    font-style: italic;
+}
+
+.netflix-font {
+    font-family: "Bebas Neue", serif;
+}
+
+.netflix-color {
+    color: #E50914;
+}
+
+a.navbar-button {
+    text-decoration: none;
+    color: black;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #323232;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #E50914;
+}

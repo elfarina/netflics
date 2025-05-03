@@ -1,0 +1,105 @@
+section.main-poster{
+    margin-left:10vw;
+    margin-right:10vw;
+    height:70vh;
+    width:80vw;
+    background: linear-gradient(180deg, rgba(19,19,19,0) 0%, rgba(19,19,19,1) 100%), url('../images/logo_blackbg.png') no-repeat center;
+}
+.title-container{
+    color:whitesmoke;
+    width:80%;
+}
+.title-container .title{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:5rem;
+    padding:1rem;
+}
+.title-container .info{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    padding-left:1.8rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.title-container .info .valutation{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width:30%;
+    font-size:1.4rem;
+    text-transform: lowercase;
+    
+}
+.title-container .info .duration{
+    font-size: 1.2rem;
+}
+.title-container .info .description{
+    display:flex;
+    flex-direction:column;
+}
+.title-container .info .description .description-text{
+    max-width:100%;
+    text-justify: distribute;
+    margin:0.7rem;
+}
+.title-container .info .description .description-table{
+    display:flex;
+    flex-direction: column;
+    flex:1;
+    width:100%;
+    justify-content: center;
+    margin:1.5rem 0rem 1.5rem 2rem ;
+    gap:1rem;
+}
+.title-container .info .description .description-table .description-row{
+    display:flex;
+    flex-direction:row;
+    gap:1.4rem;
+    justify-content: baseline;
+    max-width:40%;
+    text-shadow: #131313 0px 0px 20px;
+    
+}
+.title-container .info .description .description-table .description-row .description-row-title{
+    font-weight: 700;  
+    flex:1;
+    color: #E50914;
+}
+.title-container .info .description .description-table .description-row .description-text{
+    flex:1;
+}
+.title-container .info .buttons-group{
+    display:flex;
+    width:50%;
+    height: 7rem;
+    justify-content: space-around;
+    background: radial-gradient(rgba(19,19,19,0.7) 0%, rgba(19,19,19,0.1) 100% );
+}
+.title-container .info .buttons-group a{
+    color:white;
+    text-decoration: none;
+    width: 130px;
+    height:40px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    align-self: center;
+    transition-duration: 0.2s;
+    border-radius: 5px;
+}
+.title-container .info .buttons-group a:hover{
+    box-shadow: 0px 0px 20px #E50914;
+}
+
+.title-container .info .buttons-group a.play-button{
+    justify-content: space-around;
+    background-color: #E50914; 
+    display:flex; 
+    justify-content: center;
+    text-align: center;
+    gap:5px;
+    
+}
+

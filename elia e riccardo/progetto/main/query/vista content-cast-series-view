@@ -1,0 +1,16 @@
+CREATE VIEW content_cast_series_view AS
+SELECT 
+    ccv.content_id,
+    ccv.content_title,
+    ccv.content_description,
+    ccv.content_release_year,
+    ccv.content_type,
+    ccv.content_poster_url,
+    ccv.cast_id,
+    ccv.cast_name,
+    ccv.cast_role,
+    csv.num_seasons
+FROM 
+    content_cast_view ccv
+LEFT JOIN 
+    content_series_view csv ON ccv.content_id = csv.content_id;

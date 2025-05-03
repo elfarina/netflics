@@ -1,0 +1,9 @@
+SELECT c.id, c.title, c.description, c.release_year, c.type, c.poster_url, c.rating, 
+MAX(csv.series_seasons_count) AS series_seasons_count, 
+GROUP_CONCAT(ca.name ORDER BY ca.name) AS cast_names, GROUP_CONCAT(g.name ORDER BY g.name) AS genres 
+FROM content_cast_series_view csv JOIN content c ON csv.content_id = c.id JOIN cast ca ON csv.cast_id = ca.id 
+INNER JOIN content_genres cg ON c.id = cg.content_id 
+INNER JOIN genres g ON cg.genre_id = g.id 
+WHERE (c.title LIKE "%<text>%" OR ca.name LIKE "%<text>%" OR g.name LIKE "%<text>%") 
+GROUP BY c.id, c.title, c.description, c.release_year, c.type, c.poster_url, c.rating 
+ORDER BY c.title;

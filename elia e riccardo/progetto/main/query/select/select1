@@ -1,0 +1,8 @@
+SELECT c.id, c.title, c.description, c.release_year, c.type, c.poster_url, c.rating, MAX(csv.series_seasons_count) AS series_seasons_count, 
+GROUP_CONCAT(ca.name ORDER BY ca.name) AS cast_names 
+FROM content_cast_series_view csv 
+JOIN content c ON csv.content_id = c.id 
+JOIN cast ca ON csv.cast_id = ca.id 
+WHERE c.title LIKE "%<text>%" OR ca.name LIKE "%<text>%" 
+GROUP BY c.id, c.title, c.description, c.release_year, c.type, c.poster_url, c.rating 
+ORDER BY c.title;

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <section class="main-poster">
+        <div class="title-container">
+            <div class="title">
+                Fight Club
+            </div>
+            <div class="info">
+                <span class="valutation">
+                    <div class="valutation-vote">4.3</div>
+                    <div class="valutation-duration">2h 21min</div>
+                </span>
+                <span class="description">
+                    <div class="description-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima libero eaque rem officiis accusantium officia nisi, tempora harum maxime vero laborum molestiae nesciunt saepe tenetur nemo repellendus, neque nostrum id.</div>
+                    <div class="description-table">
+                        <div class="description-row">
+                            <div class="description-row-title">Attori:</div>
+                            <div class="description-row-content">Peperone, gianni, franco</div>
+                        </div>
+                        <div class="description-row">
+                            <div class="description-row-title">Genere:</div>
+                            <div class="description-row-content">Thriller</div>
+                        </div>
+                        <div class="description-row">
+                            <div class="description-row-title">Tags:</div>
+                            <div class="description-row-content">Tarantino, franco, perù</div>
+                        </div>
+                    </div>
+                </span>
+                <div class="buttons-group">
+                    <a class="play-button">
+                        <i class="fa-solid fa-play"></i>
+                        Riproduci
+                    </a>
+                    <a class="dettails-button">
+                        Dettagli
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<style>
+    body{
+        background-color: #131313;
+    }
+    section.main-poster{
+        height:60vh;
+        width:70vw;
+        background: linear-gradient(180deg, rgba(19,19,19,0) 0%, rgba(19,19,19,1) 100%), url('main-poster.jpg') no-repeat center;
+    }
+    .title-container{
+        color:whitesmoke;
+        width:80%;
+    }
+    .title-container .title{
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size:7rem;
+        padding:1rem;
+    }
+    .title-container .info{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        padding-left:1.8rem;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .title-container .info .valutation{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width:30%;
+        font-size:1.4rem;
+        text-transform: lowercase;
+        
+    }
+    .title-container .info .duration{
+        font-size: 1.2rem;
+    }
+    .title-container .info .description{
+        display:flex;
+        flex-direction:column;
+    }
+    .title-container .info .description .description-text{
+        max-width:100%;
+        text-justify: distribute;
+        margin:0.7rem;
+    }
+    .title-container .info .description .description-table{
+        display:flex;
+        flex-direction: column;
+        flex:1;
+        width:100%;
+        justify-content: center;
+        margin:1.5rem 0rem 1.5rem 2rem ;
+        gap:1rem;
+    }
+    .title-container .info .description .description-table .description-row{
+        display:flex;
+        flex-direction:row;
+        gap:1.4rem;
+        justify-content: baseline;
+        max-width:40%;
+        text-shadow: #131313 0px 0px 20px;
+        
+    }
+    .title-container .info .description .description-table .description-row .description-row-title{
+        font-weight: 700;  
+        flex:1;
+        color: #E50914;
+    }
+    .title-container .info .description .description-table .description-row .description-text{
+        flex:1;
+    }
+    .title-container .info .buttons-group{
+        display:flex;
+        width:80%;
+        justify-content: space-around;
+        background: radial-gradient(rgba(19,19,19,0.7) 0%, rgba(19,19,19,0.1) 100% );
+    }
+    .title-container .info .buttons-group .play-button{
+        padding:0.1rem 0.7rem 0.1rem 0.7rem;
+        background-color: #E50914;
+        border-radius:2px;
+        display:flex;
+        justify-content: space-between;
+        gap:5px;
+        box-shadow: #E50914 0 0 10px;
+        font-size:1.1rem;
+        cursor:pointer;
+        transition-duration: 0.25s;
+    }
+    .title-container .info .buttons-group .play-button:hover{
+        padding:0.2rem 0.9rem 0.2rem 0.9rem;
+    }
+    .title-container .info .buttons-group .dettails-button{
+        cursor:pointer;
+        padding:0.1rem 0.7rem 0.1rem 0.7rem;
+        background-color: #131313;
+        border-radius:2px;
+        box-shadow: #131313 0 0 10px;
+        font-size:1.1rem;
+        transition-duration: 0.25s;
+    }
+    .title-container .info .buttons-group .dettails-button:hover{
+        padding:0.2rem 0.9rem 0.2rem 0.9rem;
+    }
+</style>
+</html>

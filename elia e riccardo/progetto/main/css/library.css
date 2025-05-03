@@ -1,0 +1,130 @@
+
+body{
+    padding-bottom:50vh;
+    height:auto;
+    background-color: #131313 !important;
+}
+.library-container{
+    background-color: #131313;
+    height:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-self: flex-start;
+}
+.library-container .library-row{
+    display:flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding:0.5rem 0.8rem 0.5rem 0.8rem; 
+}
+.library-container .library-row .title{
+    text-align: left;
+    height:3rem;
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-size: 2rem;
+    padding:0.5rem 0.8rem 0.5rem 0.8rem; 
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #E50914;
+}
+.library-container .library-row .title span{
+    font-style: italic;
+    color: white;
+    margin:0 0.8rem 0 0.2rem;
+}
+
+.library-container .library-row .library-desc{
+    width:100%;
+    display:flex;
+    flex-direction: row;
+}
+.library-container .library-row .library-desc .content-list{
+
+}
+.library-container .library-row .library-desc .content-list .content{
+    margin:1rem;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 18rem;
+    background-size: cover;
+    background: url("../images/logo_og.png") no-repeat center;
+    aspect-ratio: 2 / 3;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.library-container .library-row .library-desc .content-list .content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit; /* Copia il background dell'elemento */
+    z-index: 0; /* Posiziona lo pseudo-elemento dietro al contenuto */
+    transform: scale(1); /* Impostazione iniziale */
+    opacity: 1; /* Impostazione iniziale */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transizione fluida */
+}
+
+
+.library-container .library-row .library-desc .content-list .content .content-list-item-img{
+    height: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    transition: all 0.3s ease;
+    position: relative;
+    top: 0;
+    border-radius: 8px;
+    z-index: 1; /* Mantiene l'immagine sopra il background */
+}
+.library-container .library-row .library-desc .content-list .content .content-list-item-title{
+    opacity: 0;
+    background-color: #131313;
+    color: white;
+    padding: 0 1rem;
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    position: absolute;
+    top: 10%;
+    left: 2rem;
+    transition: all 0.3s ease;
+    z-index: 2; /* Per restare sopra lo sfondo */
+}
+.library-container .library-row .library-desc .content-list .content .content-list-item-desc{
+    opacity: 0;
+    padding: 1rem;
+    font-size: 0.6em;
+    transition: all 0.3s ease;
+    position: relative;
+    top: -8rem;
+    font-family: "Poppins", serif;
+    font-weight: 100;
+    font-style: normal;
+    background-color: #131313;
+    z-index: 2; /* Per restare sopra lo sfondo */
+
+}
+
+.library-container .library-row .library-desc .content-list .content:hover .content-list-item-title,
+.library-container .library-row .library-desc .content-list .content:hover .content-list-item-desc{
+    opacity:1;
+}
+.library-container .library-row .library-desc .content-list .content:hover .content-list-item-img {
+    transform: scale(1.2);
+    opacity: 0.5;
+}
+
+.library-container .library-row .library-desc .content-list .content:hover::before {
+    transform: scale(1.2); /* Effetto di ingrandimento */
+    opacity: 0.5; /* Effetto di trasparenza */
+}
